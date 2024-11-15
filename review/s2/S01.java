@@ -1,19 +1,24 @@
 package review.s2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class S01 {
 
-    public int solution(String str, char c){
-        int answer =0;
+    public List solution(int n, int[] arr){
 
-        char lowerC = Character.toLowerCase(c);
-        String lowerStr = str.toLowerCase();
+        List<Integer> answer = new ArrayList<>();
 
-        for(char ch : lowerStr.toCharArray()){
-            if(ch == lowerC) answer++;
+        answer.add(arr[0]);
 
+        for(int i=1; i<arr.length; i++){
+            if(arr[i-1] < arr[i]){
+                answer.add(arr[i]);
+            }
         }
+
+
 
 
         return answer;
@@ -22,10 +27,16 @@ public class S01 {
     public static void main(String[] args) {
         S01 T = new S01();
         Scanner scan = new Scanner(System.in);
-        String str = scan.next();
-        char c = scan.next().charAt(0);
+        int n = scan.nextInt();
+        int[] arr = new int[n];
 
-        System.out.println(T.solution(str,c));
+        for(int i=0; i<n; i++){
+            arr[i] = scan.nextInt();
+        }
+
+
+
+        System.out.println(T.solution(n,arr));
 
 
     }

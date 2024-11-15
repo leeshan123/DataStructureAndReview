@@ -15,10 +15,6 @@ public class S04 {
         }
 
 
-
-
-
-
         return answer;
     }
 
@@ -31,9 +27,7 @@ public class S04 {
         int[] solution = T.solution(n);
 
         for (int answer : solution) {
-            System.out.println(answer
-
-            );
+            System.out.println(answer);
         }
 
 

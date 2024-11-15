@@ -1,18 +1,20 @@
 package review.s2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class S02 {
 
-    public String solution(String s){
-        String answer = "";
+    public int solution(int n, int[] arr){
+        int answer = 1;
+        int max = arr[0];
 
-        char[] cArr = s.toCharArray();
-
-        for(char c : cArr){
-            if(Character.isLowerCase(c)){
-                answer += Character.toUpperCase(c);
-            }else answer += Character.toLowerCase(c);
+        for(int i=0; i<arr.length; i++){
+            if(max < arr[i]){
+                max = arr[i];
+                answer++;
+            }
         }
 
 
@@ -22,9 +24,14 @@ public class S02 {
     public static void main(String[] args) {
         S02 T = new S02();
         Scanner scan = new Scanner(System.in);
-        String s = scan.next();
+        int n = scan.nextInt();
+        int[] arr = new int[n];
 
-        System.out.println(T.solution(s));
+        for(int i=0; i<n; i++){
+            arr[i] = scan.nextInt();
+        }
+
+        System.out.println(T.solution(n,arr));
 
 
     }
