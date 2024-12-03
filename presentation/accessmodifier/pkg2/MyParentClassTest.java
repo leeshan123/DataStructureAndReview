@@ -2,7 +2,7 @@ package presentation.accessmodifier.pkg2;
 
 import presentation.accessmodifier.pkg1.MyParent;
 //import presentation.accessmodifier.pkg1.MyParentClass;
-
+//
 //class MyChildClass extends MyParentClass {
 //
 //}
