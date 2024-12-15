@@ -41,6 +41,18 @@ public class SetEx1 {
 
         System.out.println("바꾼 후  : (key)" + set.contains(key));
         System.out.println("바꾼 후  : (newKey)" + set.contains(newKey));
+
+        set.add(newKey);
+        for (ImmutableKey k : set) {
+            if (k.equals(newKey)) {
+                System.out.println("Set에서 찾은 새로운 키 객체: " + k);
+            }
+            if(k.equals(key)){
+                System.out.println("oldkey: "+ k);
+            }
+        }
+
+
     }
 
 
