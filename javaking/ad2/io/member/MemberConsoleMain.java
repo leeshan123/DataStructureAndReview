@@ -1,14 +1,21 @@
-package javaking.ad2.io.member.impl;
+package javaking.ad2.io.member;
 
 import javaking.ad2.io.member.Member;
 import javaking.ad2.io.member.MemberRepository;
+import javaking.ad2.io.member.impl.DataMemberRepository;
+import javaking.ad2.io.member.impl.FileMemberRepository;
+import javaking.ad2.io.member.impl.MemoryMemberRepository;
+import javaking.ad2.io.member.impl.ObjectMemberRepository;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class MemberConsoleMain {
 
-    private static final MemberRepository repository = new MemoryMemberRepository();
+//    private static final MemberRepository repository = new MemoryMemberRepository();
+//    private static final MemberRepository repository = new FileMemberRepository();
+//    private static final MemberRepository repository = new DataMemberRepository();
+    private static final MemberRepository repository = new ObjectMemberRepository();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
