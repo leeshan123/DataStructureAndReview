@@ -12,7 +12,7 @@ public class Main {
             System.out.println("vapor");
         }else if(temp > 0){
             System.out.println("water");
-        }else {
+        }else if(temp < 0) {
             System.out.println("ice");
         }
 
