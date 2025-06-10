@@ -10,12 +10,12 @@ public class Main {
         int num2 = Integer.parseInt(inputNum[1]);
         int sum = 0;
 
-        for(int i=num1; i<num2; i++){
+        for(int i=num1; i<=num2; i++){
             if(i % 2 == 0){
                 sum += i;
         }
     }
 
     System.out.println(sum);
-}
+    }
 }
